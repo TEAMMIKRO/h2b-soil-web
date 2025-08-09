@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Info Tanaman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-green-700 text-white shadow">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                
+                <!-- Logo Kiri -->
+                <div class="flex items-center space-x-3">
+                    <img src="assets/PB.jpeg" alt="Logo Kiri" class="h-10 w-10 rounded-full">
+                    <a href="beranda.html" class="text-2xl font-bold hover:text-green-300 transition">Hearts 2 BEE Dashboard</a>
+                </div>
+
+                <!-- Logo Kanan -->
+                <img src="assets/CS.jpeg" alt="Logo Kanan" class="h-10 w-10 rounded-full hidden md:block">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-16 bg-green-100 animate-fadeIn">
+        <h2 class="text-3xl font-bold mb-4">Selamat Datang di Website H2B</h2>
+        <p class="max-w-2xl mx-auto text-lg">
+            Website ini memberikan informasi penting mengenai pH, EC (Electrical Conductivity), kelembapan, dan suhu ideal untuk berbagai tanaman seperti tomat, seledri, lettuce, dan kubis.
+        </p>
+    </section>
+
+    <!-- Section Daftar Tanaman -->
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <h3 class="text-2xl font-bold mb-6 text-center">Tanaman yang Tersedia</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <!-- Tomat -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
+                <img src="assets/tomat.jpg" alt="Tomat" class="w-full h-40 object-cover rounded-lg mb-3">
+                <h4 class="text-lg font-semibold">Tomat</h4>
+                <p class="text-sm text-gray-600 mb-3">Informasi pH, EC, kelembapan, dan suhu ideal untuk budidaya tomat.</p>
+                <a href="index.html#tomat" class="text-green-700 hover:underline">Lihat Detail</a>
+            </div>
+
+            <!-- Seledri -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
+                <img src="assets/seledri.jpg" alt="Seledri" class="w-full h-40 object-cover rounded-lg mb-3">
+                <h4 class="text-lg font-semibold">Seledri</h4>
+                <p class="text-sm text-gray-600 mb-3">Parameter penting untuk tanaman seledri agar tumbuh optimal.</p>
+                <a href="index.html#seledri" class="text-green-700 hover:underline">Lihat Detail</a>
+            </div>
+
+            <!-- Lettuce -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
+                <img src="assets/lettuce.png" alt="Lettuce" class="w-full h-40 object-cover rounded-lg mb-3">
+                <h4 class="text-lg font-semibold">Lettuce</h4>
+                <p class="text-sm text-gray-600 mb-3">Kondisi ideal untuk menanam lettuce agar segar dan renyah.</p>
+                <a href="index.html#lettuce" class="text-green-700 hover:underline">Lihat Detail</a>
+            </div>
+
+            <!-- Kubis -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
+                <img src="assets/kubis.jpg" alt="Kubis" class="w-full h-40 object-cover rounded-lg mb-3">
+                <h4 class="text-lg font-semibold">Kubis</h4>
+                <p class="text-sm text-gray-600 mb-3">Informasi kondisi lingkungan terbaik untuk kubis.</p>
+                <a href="index.html#kubis" class="text-green-700 hover:underline">Lihat Detail</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Singkat -->
+    <section class="bg-green-50 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Tips Singkat Perawatan</h3>
+            <ul class="list-disc text-left mx-auto max-w-md text-gray-700">
+                <li>Gunakan alat ukur pH dan EC untuk memastikan kesesuaian media tanam.</li>
+                <li>Perhatikan kelembapan tanah secara rutin, jangan terlalu kering atau basah.</li>
+                <li>Jaga suhu sesuai kebutuhan masing-masing tanaman.</li>
+                <li>Lakukan rotasi tanaman untuk menjaga kualitas tanah.</li>
+            </ul>
+            <a href="tips.html" class="mt-6 inline-block bg-green-700 text-white px-6 py-2 rounded-lg shadow hover:bg-green-800 transition">Lihat Tips Lengkap</a>
+        </div>
+    </section>
+
+    <!-- Script Animasi -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".animate-fadeIn").forEach(el => {
+                el.classList.add("opacity-0");
+                setTimeout(() => {
+                    el.classList.remove("opacity-0");
+                    el.classList.add("transition", "duration-1000", "opacity-100");
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
