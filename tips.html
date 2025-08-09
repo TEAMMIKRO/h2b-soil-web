@@ -1,38 +1,256 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tips Perawatan - Monitoring Tanaman</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tips Perawatan - Hearts 2 BEE</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth scroll untuk anchor */
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="bg-green-50 text-gray-800">
 
-  <!-- Navbar -->
-    <nav class="bg-green-700 text-white shadow">
+  <!-- NAVBAR -->
+  <nav class="bg-green-700 text-white shadow">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between items-center py-4">
-        <a href="tips.html" class="text-2xl font-bold">Hearts 2 BEE Dashboard</a>
-      <div class="space-x-4">
-        <a href="beranda.html" class="hover:underline">Beranda</a>
-        <a href="index.html" class="hover:underline">Informasi Tanaman</a>
-        <a href="tips.html" class="underline font-semibold">Tips Perawatan</a>
+        <a href="beranda.html" class="text-2xl font-bold">Hearts 2 BEE Dashboard</a>
+        <div class="space-x-4 hidden sm:flex">
+          <a href="beranda.html" class="hover:underline">Informasi Tanaman</a>
+          <a href="index.html" class="hover:underline">Beranda</a>
+          <a href="tips.html" class="underline font-semibold">Tips Perawatan</a>
+          <a href="tutorial.html" class="hover:underline">Tutorial Alat</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Konten -->
-  <section class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4 text-green-700">Tips Perawatan Tanaman</h2>
-    <p class="mb-6">Berikut adalah beberapa tips umum untuk menjaga kondisi tanaman agar tetap optimal:</p>
+  <main class="max-w-6xl mx-auto px-4 py-10">
 
-    <ul class="list-disc pl-6 space-y-3">
-      <li><strong>pH Tanah:</strong> Gunakan kapur pertanian untuk menaikkan pH atau belerang untuk menurunkannya. Cek secara berkala minimal 1 bulan sekali.</li>
-      <li><strong>EC (Electrical Conductivity):</strong> Jangan terlalu tinggi karena dapat menyebabkan keracunan nutrisi. Gunakan pupuk dengan dosis sesuai anjuran.</li>
-      <li><strong>Kelembapan (Moisture):</strong> Pastikan tanah tetap lembap tetapi tidak becek. Gunakan mulsa untuk mempertahankan kelembapan.</li>
-      <li><strong>Suhu:</strong> Jaga suhu di kisaran optimal tanaman (misalnya 20–25°C untuk kebanyakan sayuran).</li>
-    </ul>
-  </section>
+    <!-- Judul & Intro -->
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-green-800 mb-2">Tips Perawatan Tanaman</h1>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Setiap parameter (pH, EC, Kelembapan, Suhu) punya efek langsung pada kesehatan tanaman.
+        Di halaman ini tiap parameter punya section sendiri dengan tindakan praktis jika nilainya terlalu tinggi/terlalu rendah.
+      </p>
+    </header>
+
+    <!-- Daftar Isi -->
+    <nav class="bg-white rounded-lg shadow p-4 mb-8">
+      <h2 class="font-semibold mb-3">Daftar Isi</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="#ph" class="px-3 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200">pH</a>
+        <a href="#ec" class="px-3 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200">EC</a>
+        <a href="#moisture" class="px-3 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200">Kelembapan</a>
+        <a href="#temperature" class="px-3 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200">Suhu</a>
+        <a href="#quick" class="px-3 py-2 bg-yellow-100 text-yellow-800 rounded hover:bg-yellow-200">Tindakan Cepat</a>
+      </div>
+    </nav>
+
+    <!-- SECTION: pH -->
+    <section id="ph" class="mb-8 bg-white rounded-lg shadow p-6">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">pH (Keasaman / Kebasaan)</h3>
+      <p class="text-gray-700 mb-3">
+        pH mempengaruhi ketersediaan nutrisi. Kebanyakan sayuran tumbuh baik pada pH ~5.5–7.0 (tergantung jenis).  
+        Selalu cek pH menggunakan alat pH meter atau test kit tanah sebelum mengambil tindakan korektif.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div>
+          <h4 class="font-semibold mb-1">Jika pH terlalu tinggi (alkalin, &gt; 7.0)</h4>
+          <p class="text-gray-700 mb-2">Tanda: defisiensi Fe (daun menguning sementara tulang daun hijau), pertumbuhan terhambat.</p>
+
+          <details class="mb-3">
+            <summary class="cursor-pointer font-medium">Langkah tindakan (urutan praktis)</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Tes ulang pH & lokasi — pastikan hasil konsisten (pakai 2 titik).</li>
+              <li>Tambahkan bahan pengasam alami: kompos asam, gambut (peat moss) untuk lahan kecil.</li>
+              <li>Gunakan sulfur unsur (elemental sulfur) untuk penurunan pH jangka panjang — aplikasikan sesuai petunjuk produk.</li>
+              <li>Untuk koreksi cepat pada sistem hidroponik: gunakan pupuk dengan bentuk nitrogen asam (mis. ammonium) atau acidifier khusus sesuai label.</li>
+              <li>Re-test setelah 2–6 minggu (waktu reaksi tergantung bahan dan kondisi tanah).</li>
+            </ul>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Jika pH terlalu rendah (asam, &lt; 5.5)</h4>
+          <p class="text-gray-700 mb-2">Tanda: pertumbuhan terhambat, beberapa nutrisi (mis. P, Ca, Mg) kurang tersedia.</p>
+
+          <details>
+            <summary class="cursor-pointer font-medium">Langkah tindakan (urutan praktis)</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Tes ulang pH & kelembapan — tanah sangat asam dapat disebabkan oleh pupuk atau air irigasi.</li>
+              <li>Tambahkan kapur pertanian (agricultural lime) — kapur tohor (calcium carbonate) untuk menaikkan pH. Untuk kebutuhan Mg, gunakan kapur dolomit.</li>
+              <li>Taburkan kapur merata dan aduk/biarkan bereaksi; aplikasikan dosis sesuai rekomendasi produk dan tipe tanah.</li>
+              <li>Jangan menambahkan kapur saat tanah sangat basah — aplikasikan pada kondisi normal dan ulangi tes setelah 4–8 minggu.</li>
+              <li>Gunakan pupuk yang bersifat netral atau sedikit basa bila perlu menstabilkan.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">Catatan: selalu ikuti anjuran pada kemasan produk (dosis, cara pakai). Untuk lahan besar atau masalah kronis, konsultasi dengan penyuluh/pakar setempat.</p>
+    </section>
+
+    <!-- SECTION: EC -->
+    <section id="ec" class="mb-8 bg-white rounded-lg shadow p-6">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">EC (Electrical Conductivity) — Konsentrasi Garam/Nutrisi</h3>
+      <p class="text-gray-700 mb-3">
+        EC mengukur total kelarutan garam dalam larutan (mS/cm). Nilai terlalu tinggi menandakan salinitas/kelebihan pupuk; terlalu rendah menandakan kekurangan nutrisi.
+      </p>
+
+      <div class="mb-4">
+        <h4 class="font-semibold">Contoh kisaran EC (mS/cm)</h4>
+        <ul class="list-disc list-inside text-sm text-gray-700">
+          <li>Tomat: ~2.0 – 3.5 mS/cm</li>
+          <li>Seledri: ~1.8 – 2.4 mS/cm</li>
+          <li>Lettuce: ~1.2 – 1.8 mS/cm</li>
+          <li>Kubis: ~1.8 – 3.0 mS/cm</li>
+        </ul>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div>
+          <h4 class="font-semibold mb-1">Jika EC terlalu tinggi</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Tindakan cepat</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Hentikan pemberian pupuk sementara.</li>
+              <li>Cuci/flush media tanam dengan air bersih (leaching) — pada lahan: siram banyak air untuk keluarkan garam dari zona akar.</li>
+              <li>Periksa kualitas air irigasi (EC air) — air sumber yang tinggi garam membutuhkan perlakuan atau sumber lain.</li>
+              <li>Gunakan pupuk dengan konsentrasi lebih rendah dan beri secara bertahap nantinya.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Jika EC terlalu rendah</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Tindakan cepat</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Periksa apakah sistem memberikan nutrisi (pupuk) dengan benar.</li>
+              <li>Tambah larutan nutrisi/pupuk larut dengan perlahan sampai mencapai kisaran target.</li>
+              <li>Pastikan pH juga berada di kisaran ideal karena pH mempengaruhi penyerapan nutrisi.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-3">Catatan: leaching di kebun harus dilakukan hati-hati (hindari erosi), dan pantau EC setelah 24–48 jam.</p>
+    </section>
+
+    <!-- SECTION: MOISTURE (Kelembapan) -->
+    <section id="moisture" class="mb-8 bg-white rounded-lg shadow p-6">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">Kelembapan (Moisture) — Kondisi Tanah</h3>
+      <p class="text-gray-700 mb-3">
+        Menjaga kelembapan yang tepat penting untuk pertukaran gas akar dan mineral. Terlalu kering → layu; terlalu basah → akar busuk.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div>
+          <h4 class="font-semibold mb-1">Jika tanah terlalu kering</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Solusi praktis</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Irigasi merata dan lebih dalam (watering deeply) untuk merangsang akar turun.</li>
+              <li>Gunakan mulsa (sekam, jerami) untuk mengurangi penguapan dan menjaga kelembapan.</li>
+              <li>Atur jadwal penyiraman sesuai fase tanaman (lebih sering untuk bibit, lebih jarang tapi lebih dalam untuk tanaman dewasa).</li>
+            </ul>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Jika tanah terlalu basah / tergenang</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Solusi praktis</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Kurangi frekuensi penyiraman atau durasi irigasi.</li>
+              <li>Perbaiki drainase: buat bed raised-bed, tambahkan bahan berdrainase (pasir kasar) jika perlu.</li>
+              <li>Periksa akar: bila ada tanda busuk, potong bagian yang terinfeksi dan tanam ulang bila perlu.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-3">Alat: sensor kelembapan, tensiometer, atau tes jempol (finger test) untuk perkiraan cepat.</p>
+    </section>
+
+    <!-- SECTION: TEMPERATURE -->
+    <section id="temperature" class="mb-8 bg-white rounded-lg shadow p-6">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">Suhu (Temperature)</h3>
+      <p class="text-gray-700 mb-3">
+        Suhu mempengaruhi perkecambahan, pembungaan, pembentukan buah, dan risiko stress. Sesuaikan manajemen lingkungan untuk menjaga suhu ideal.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div>
+          <h4 class="font-semibold mb-1">Jika suhu terlalu tinggi</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Tindakan cepat</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Berikan naungan (shade net) pada siang hari.</li>
+              <li>Tambahkan mulsa untuk menjaga kelembapan tanah dan menurunkan suhu permukaan.</li>
+              <li>Tingkatkan ventilasi di rumah kaca; semprot kabut halus bila aman.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Jika suhu terlalu rendah</h4>
+          <details>
+            <summary class="cursor-pointer font-medium">Tindakan cepat</summary>
+            <ul class="list-decimal list-inside mt-2 text-sm text-gray-700 space-y-1">
+              <li>Gunakan penutup tanaman (row cover) atau mulsa tebal untuk mempertahankan panas.</li>
+              <li>Untuk skala kecil, gunakan selimut panas atau lampu pijar yang aman untuk naikkan suhu malam.</li>
+              <li>Pilih varietas yang toleran suhu jika daerahmu cenderung dingin.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-3">Catatan: perbedaan suhu siang-malam juga penting — beberapa tanaman butuh malam yang lebih dingin agar kualitas buah baik.</p>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <section id="quick" class="mb-12 bg-white rounded-lg shadow p-6">
+      <h3 class="text-2xl font-bold text-green-700 mb-3">Tindakan Cepat (Ringkasan)</h3>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="p-4 border rounded">
+          <h4 class="font-semibold mb-2">pH &gt; 7 (alkalin)</h4>
+          <p class="text-sm text-gray-700">Gunakan sulfur (elemental) atau bahan pengasam organik; re-test setelah beberapa minggu.</p>
+        </div>
+
+        <div class="p-4 border rounded">
+          <h4 class="font-semibold mb-2">pH &lt; 5.5 (asam)</h4>
+          <p class="text-sm text-gray-700">Tambahkan kapur pertanian (kapur tohor/dolomit) sesuai rekomendasi, tunggu reaksi 4–8 minggu, lalu re-test.</p>
+        </div>
+
+        <div class="p-4 border rounded">
+          <h4 class="font-semibold mb-2">EC tinggi (salinity)</h4>
+          <p class="text-sm text-gray-700">Hentikan pupuk, leach dengan air bersih, periksa sumber air, kurangi dosis pupuk.</p>
+        </div>
+
+        <div class="p-4 border rounded">
+          <h4 class="font-semibold mb-2">Tanah terlalu basah</h4>
+          <p class="text-sm text-gray-700">Perbaiki drainase, kurangi irigasi, gunakan raised-bed bila perlu.</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-4">
+        Catatan penting: tindakan di atas bersifat umum. Selalu baca label produk pupuk/amendemen dan sesuaikan dengan kondisi lokal. Untuk kasus serius atau lahan besar, konsultasikan dengan agronomis setempat.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-700 text-white text-center py-6">
+    <p class="text-sm">&copy; 2025 Hearts 2 BEE — Tips Perawatan Tanaman</p>
+  </footer>
 
 </body>
 </html>

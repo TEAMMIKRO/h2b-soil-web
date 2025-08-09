@@ -1,102 +1,136 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Info Tanaman</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Parameter Information</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="bg-green-700 text-white shadow">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                
-                <!-- Logo Kiri -->
-                <div class="flex items-center space-x-3">
-                    <img src="assets/PB.jpeg" alt="Logo Kiri" class="h-10 w-10 rounded-full">
-                    <a href="beranda.html" class="text-2xl font-bold hover:text-green-300 transition">Hearts 2 BEE Dashboard</a>
-                </div>
-
-                <!-- Logo Kanan -->
-                <img src="assets/CS.jpeg" alt="Logo Kanan" class="h-10 w-10 rounded-full hidden md:block">
-            </div>
+   <!-- Navbar -->
+  <nav class="bg-green-700 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="beranda.html" class="text-2xl font-bold">Hearts 2 BEE Dashboard</a>
+        <div class="space-x-4">
+          <a href="beranda.html" class="hover:underline font-semibold">Informasi Tanaman</a>
+          <a href="index.html" class="hover:underline">Beranda</a>
+          <a href="tips.html" class="hover:underline">Tips Perawatan</a>
+          <a href="tutorial.html" class="hover:underline">Tutorial Alat</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="text-center py-16 bg-green-100 animate-fadeIn">
-        <h2 class="text-3xl font-bold mb-4">Selamat Datang di Website H2B</h2>
-        <p class="max-w-2xl mx-auto text-lg">
-            Website ini memberikan informasi penting mengenai pH, EC (Electrical Conductivity), kelembapan, dan suhu ideal untuk berbagai tanaman seperti tomat, seledri, lettuce, dan kubis.
-        </p>
-    </section>
+  <!-- Header -->
+  <header class="bg-green-700 text-white p-6 shadow">
+    <h1 class="text-3xl font-bold text-center">Informasi Parameter Tanaman</h1>
+    <p class="text-center text-sm mt-1">pH, EC, Kelembapan, Suhu</p>
+  </header>
 
-    <!-- Section Daftar Tanaman -->
-    <section class="max-w-6xl mx-auto py-12 px-4">
-        <h3 class="text-2xl font-bold mb-6 text-center">Tanaman yang Tersedia</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            
-            <!-- Tomat -->
-            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
-                <img src="assets/tomat.jpg" alt="Tomat" class="w-full h-40 object-cover rounded-lg mb-3">
-                <h4 class="text-lg font-semibold">Tomat</h4>
-                <p class="text-sm text-gray-600 mb-3">Informasi pH, EC, kelembapan, dan suhu ideal untuk budidaya tomat.</p>
-                <a href="index.html#tomat" class="text-green-700 hover:underline">Lihat Detail</a>
-            </div>
+  <!-- Tab Navigation -->
+  <div class="max-w-4xl mx-auto mt-6 flex justify-center flex-wrap gap-3">
+    <button class="tab-btn bg-green-600 text-white px-4 py-2 rounded-lg shadow active" data-target="tomat">Tomat</button>
+    <button class="tab-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg shadow" data-target="seledri">Seledri</button>
+    <button class="tab-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg shadow" data-target="lettuce">Lettuce</button>
+    <button class="tab-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg shadow" data-target="kubis">Kubis</button>
+  </div>
 
-            <!-- Seledri -->
-            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
-                <img src="assets/seledri.jpg" alt="Seledri" class="w-full h-40 object-cover rounded-lg mb-3">
-                <h4 class="text-lg font-semibold">Seledri</h4>
-                <p class="text-sm text-gray-600 mb-3">Parameter penting untuk tanaman seledri agar tumbuh optimal.</p>
-                <a href="index.html#seledri" class="text-green-700 hover:underline">Lihat Detail</a>
-            </div>
-
-            <!-- Lettuce -->
-            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
-                <img src="assets/lettuce.png" alt="Lettuce" class="w-full h-40 object-cover rounded-lg mb-3">
-                <h4 class="text-lg font-semibold">Lettuce</h4>
-                <p class="text-sm text-gray-600 mb-3">Kondisi ideal untuk menanam lettuce agar segar dan renyah.</p>
-                <a href="index.html#lettuce" class="text-green-700 hover:underline">Lihat Detail</a>
-            </div>
-
-            <!-- Kubis -->
-            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
-                <img src="assets/kubis.jpg" alt="Kubis" class="w-full h-40 object-cover rounded-lg mb-3">
-                <h4 class="text-lg font-semibold">Kubis</h4>
-                <p class="text-sm text-gray-600 mb-3">Informasi kondisi lingkungan terbaik untuk kubis.</p>
-                <a href="index.html#kubis" class="text-green-700 hover:underline">Lihat Detail</a>
-            </div>
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto p-6">
+    <!-- Tomat -->
+    <div id="tomat" class="tab-content bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+      <div class="flex flex-col md:flex-row gap-6">
+        <img src="./assets/tomat.jpg" alt="Tomat" class="w-full md:w-1/3 h-48 object-cover rounded-lg shadow">
+        <div>
+          <h2 class="text-xl font-bold text-green-700">Tomat</h2>
+          <p class="text-gray-500 italic mb-4">Solanum lycopersicum</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li><strong>pH:</strong> Ideal 6.0–6.5 untuk penyerapan nutrisi optimal dan mencegah penyakit akar.</li>
+            <li><strong>EC:</strong> 2.0–3.5 mS/cm, menjaga ketersediaan nutrisi seimbang tanpa risiko kelebihan garam.</li>
+            <li><strong>Kelembapan:</strong> 60–70%, membantu pertumbuhan buah dan mencegah keretakan kulit.</li>
+            <li><strong>Suhu:</strong> 21–27°C, mendukung pembungaan dan pembentukan buah yang baik.</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Tips Singkat -->
-    <section class="bg-green-50 py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold mb-4">Tips Singkat Perawatan</h3>
-            <ul class="list-disc text-left mx-auto max-w-md text-gray-700">
-                <li>Gunakan alat ukur pH dan EC untuk memastikan kesesuaian media tanam.</li>
-                <li>Perhatikan kelembapan tanah secara rutin, jangan terlalu kering atau basah.</li>
-                <li>Jaga suhu sesuai kebutuhan masing-masing tanaman.</li>
-                <li>Lakukan rotasi tanaman untuk menjaga kualitas tanah.</li>
-            </ul>
-            <a href="tips.html" class="mt-6 inline-block bg-green-700 text-white px-6 py-2 rounded-lg shadow hover:bg-green-800 transition">Lihat Tips Lengkap</a>
+    <!-- Seledri -->
+    <div id="seledri" class="tab-content bg-white rounded-xl shadow-lg p-6 border border-gray-200 hidden">
+      <div class="flex flex-col md:flex-row gap-6">
+        <img src="./assets/seledri.jpg" alt="Seledri" class="w-full md:w-1/3 h-48 object-cover rounded-lg shadow">
+        <div>
+          <h2 class="text-xl font-bold text-green-700">Seledri</h2>
+          <p class="text-gray-500 italic mb-4">Apium graveolens</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li><strong>pH:</strong> 6.0–7.0, membantu perkembangan batang yang segar dan rasa optimal.</li>
+            <li><strong>EC:</strong> 1.8–2.4 mS/cm, mencegah daun menguning akibat ketidakseimbangan nutrisi.</li>
+            <li><strong>Kelembapan:</strong> 65–75%, menjaga tekstur renyah dan menghindari layu.</li>
+            <li><strong>Suhu:</strong> 15–21°C, ideal untuk pertumbuhan lambat dan pembentukan aroma.</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Script Animasi -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".animate-fadeIn").forEach(el => {
-                el.classList.add("opacity-0");
-                setTimeout(() => {
-                    el.classList.remove("opacity-0");
-                    el.classList.add("transition", "duration-1000", "opacity-100");
-                }, 100);
-            });
+    <!-- Lettuce -->
+    <div id="lettuce" class="tab-content bg-white rounded-xl shadow-lg p-6 border border-gray-200 hidden">
+      <div class="flex flex-col md:flex-row gap-6">
+        <img src="./assets/lettuce.png" alt="Lettuce" class="w-full md:w-1/3 h-48 object-cover rounded-lg shadow">
+        <div>
+          <h2 class="text-xl font-bold text-green-700">Lettuce</h2>
+          <p class="text-gray-500 italic mb-4">Lactuca sativa</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li><strong>pH:</strong> 5.8–6.2, mencegah ujung daun mengering dan memperbaiki penyerapan kalsium.</li>
+            <li><strong>EC:</strong> 1.2–1.8 mS/cm, mempertahankan pertumbuhan daun yang lembut.</li>
+            <li><strong>Kelembapan:</strong> 60–70%, membantu pembentukan daun yang segar dan tahan lama.</li>
+            <li><strong>Suhu:</strong> 16–20°C, mencegah tanaman cepat berbunga (bolting).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kubis -->
+    <div id="kubis" class="tab-content bg-white rounded-xl shadow-lg p-6 border border-gray-200 hidden">
+      <div class="flex flex-col md:flex-row gap-6">
+        <img src="./assets/kubis.jpg" alt="Kubis" class="w-full md:w-1/3 h-48 object-cover rounded-lg shadow">
+        <div>
+          <h2 class="text-xl font-bold text-green-700">Kubis</h2>
+          <p class="text-gray-500 italic mb-4">Brassica oleracea</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li><strong>pH:</strong> 6.0–6.8, mengurangi risiko penyakit akar seperti akar gada (clubroot).</li>
+            <li><strong>EC:</strong> 2.0–3.0 mS/cm, memastikan ketersediaan nutrisi makro dan mikro seimbang.</li>
+            <li><strong>Kelembapan:</strong> 65–80%, mencegah daun menjadi kaku dan memudahkan pembentukan krop.</li>
+            <li><strong>Suhu:</strong> 18–24°C, ideal untuk pembentukan krop yang padat dan manis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        // reset tombol
+        tabButtons.forEach(b => {
+          b.classList.remove("bg-green-600", "text-white", "active");
+          b.classList.add("bg-gray-200", "hover:bg-gray-300");
         });
-    </script>
+
+        // sembunyikan semua konten
+        tabContents.forEach(content => content.classList.add("hidden"));
+
+        // aktifkan tab terpilih
+        btn.classList.remove("bg-gray-200", "hover:bg-gray-300");
+        btn.classList.add("bg-green-600", "text-white", "active");
+
+        document.getElementById(btn.dataset.target).classList.remove("hidden");
+      });
+    });
+  </script>
 </body>
 </html>
